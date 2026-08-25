@@ -3,11 +3,11 @@
 I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
 
 #### Email  
-<code>XX@XX.XX</code>  
-<code>XX@XX.XX</code>
+<code>zhanggb928@163.com</code>  
+<code>3022949790@qq.com</code>
 
 #### Education  
-**XX University**, Master of XX (XX – XX)  
+**云南大学 信息学院**, Master of XX (XX – XX)  
 • GPA: XX/XX  
 
 **XX University**, Exchange student <br>  
@@ -17,4 +17,4 @@ I'm currently pursuing a Master's degree in XX at the Department of XX, XX Unive
 • GPA: XX/XX (top XX%)  
 
 #### Research Interests  
-XX, XX, XX, XX.
+多模态学习, Agent开发
