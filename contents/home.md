@@ -1,7 +1,7 @@
-[![XX](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/XX)
+[![XX](https://github.com/Sammir-z?tab=repositories)](https://github.com/Sammir-z)
 
-I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
-
+<!-- I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX. -->
+我目前正在云南大学信息学院，攻读人工智能专业硕士研究生。
 #### Email  
 <code>zhanggb928@163.com</code>  
 <code>3022949790@qq.com</code>
