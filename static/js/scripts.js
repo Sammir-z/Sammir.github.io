@@ -1,6 +1,12 @@
 const content_dir = 'contents/'
 const config_file = 'config.yml'
-const section_names = ['home', 'awards', 'experience', 'publications'];
+const content_sections = [
+    { id: 'home', file: 'home.md' },
+    { id: 'projects', file: 'projects.md' },
+    { id: 'research', file: 'experience.md' },
+    { id: 'publications', file: 'publications.md' },
+    { id: 'awards', file: 'awards.md' },
+];
 
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -47,12 +53,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Marked
     marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
+    content_sections.forEach(({ id, file }) => {
+        fetch(content_dir + file)
             .then(response => response.text())
             .then(markdown => {
                 const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
+                document.getElementById(id + '-md').innerHTML = html;
             }).then(() => {
                 // MathJax
                 MathJax.typeset();
