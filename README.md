@@ -1,72 +1,137 @@
-![Github Forks](https://img.shields.io/github/forks/Yixin0313/personal-homepage-template?style=flat)
-![Github Stars](https://img.shields.io/github/stars/Yixin0313/personal-homepage-template?style=flat)
-![License](https://img.shields.io/github/license/Yixin0313/personal-homepage-template)
+# Sammir | AI Engineering Portfolio
 
-# 通用个人主页模板：适用于学术和求职场景 | A general-purpose template: suitable for both academic and professional use.
+> AI Agent Developer · Multimodal Learning Researcher
 
-## 预览 | Preview
-[![Screenshot of the Website](https://raw.githubusercontent.com/Yixin0313/personal-homepage-template/main/screenshot_full.png)](https://yixin0313.github.io/personal-homepage-template/)
+这是 Sammir 的个人作品集网站，主要记录 AI Agent、多模态学习、RAG 和 LLM 应用工程相关的研究与项目实践。
 
-## 介绍 | Introduction
+This is Sammir's personal portfolio website, focused on AI agents, multimodal learning, retrieval-augmented generation, and LLM application engineering.
 
-这是一个**通用的个人主页模板**，基于 [Sen Li 的学术主页模板](https://github.com/senli1073/senli1073.github.io) 进行修改。  
+## Featured projects
 
-我新增了**工作经历板块**，使其更加适用于程序员和求职者。并且使用了中英文对照版本。
+### DeepSearch-Agent
 
-This is a **general-purpose personal website template**, modified from [Sen Li's academic template](https://github.com/senli1073/senli1073.github.io).  
+面向复杂行业调研与资料分析的 Deep Research 多智能体系统，支持任务拆解、多源信息检索、会话状态管理、流式输出和 Markdown / PDF 报告生成。
 
-I have added a **work experience section**, making it more practical for programmers and job seekers.
+- Repository: [Sammir-z/DeepSearch-Agent](https://github.com/Sammir-z/DeepSearch-Agent)
+- Stack: DeepAgents, LangGraph, FastAPI, WebSocket, RAGFlow, MySQL, Docker
 
-Bilibili教程视频：【【2025最新保姆级教程】手把手教你用github制作个人主页（申学找工作必备）】https://www.bilibili.com/video/BV16nNMeFEzm?vd_source=79b688b1a191b9f9e8204aa1c3d0adab
+### NL2SQL
 
-CSDN教程：https://blog.csdn.net/qq_45743991/article/details/145505150?spm=1001.2014.3001.5502
+面向业务人员的自然语言到 SQL 查询 Agent，围绕元数据理解、SQL 生成、校验、修复、执行和流式返回构建完整闭环。
 
-## 快速开始 | Getting Start
-### 1. Fork 该仓库 | Fork this repository
-仓库名称应命名为 `<用户名>.github.io`，这样你的个人网站地址将是 `https://<用户名>.github.io/`。
+- Repository: [Sammir-z/NL2SQL](https://github.com/Sammir-z/NL2SQL)
+- Stack: LangGraph, LangChain, FastAPI, MySQL, Qdrant, Elasticsearch, Embedding
 
-The repository name should be `<username>.github.io`, which will also be your website's URL.
+## Tech stack
 
+`HTML` · `CSS` · `JavaScript` · `Markdown` · `YAML` · `Bootstrap` · `Python` · `LangChain` · `LangGraph` · `RAG` · `MCP`
 
-### 2.  编辑页面内容 | Edit page content
-(1) 进入你想存放项目的文件夹，并克隆新的仓库 | Go to the folder where you want to store your project, and clone the new repository:
+## Run locally
+
+这是一个无需构建工具的静态网站。建议使用本地 HTTP 服务运行，因为页面会通过 `fetch()` 加载 Markdown 和 YAML 内容。
+
+```powershell
+git clone https://github.com/Sammir-z/Sammir.github.io.git
+cd Sammir.github.io
+python -m http.server 4173
 ```
-git clone https://github.com/<username>/<username>.github.io.git
-```
-项目的目录结构如下 | The directory structure is as follows:
 
-```.
+然后访问：<http://127.0.0.1:4173/>
+
+停止服务时，在终端按 `Ctrl + C`。
+
+## Reuse this website
+
+其他人可以把本项目 Fork 后改造成自己的个人主页：
+
+### 1. Fork 仓库
+
+点击 GitHub 页面右上角的 **Fork**，将仓库复制到自己的账号下。
+
+### 2. 设置仓库名称
+
+如果希望使用 GitHub Pages 的根域名，将仓库重命名为：
+
+```text
+<你的用户名>.github.io
+```
+
+例如用户名是 `alice`，仓库名应为 `alice.github.io`，访问地址就是：
+
+```text
+https://alice.github.io/
+```
+
+如果保留其他仓库名，则使用项目站点地址：
+
+```text
+https://<你的用户名>.github.io/<仓库名>/
+```
+
+### 3. 替换个人内容
+
+主要内容都放在 `contents/` 目录中：
+
+| 文件 | 用途 |
+| --- | --- |
+| `config.yml` | 页面标题、Hero 文案、页脚版权信息 |
+| `home.md` | 个人简介、研究方向、教育背景 |
+| `projects.md` | GitHub 项目卡片 |
+| `experience.md` | 研究与工程经历 |
+| `publications.md` | 论文或研究成果 |
+| `awards.md` | 奖项和荣誉 |
+
+### 4. 替换图片
+
+将自己的头像和背景图放入：
+
+```text
+static/assets/img/
+```
+
+然后在 `index.html` 或 `static/css/main.css` 中替换对应图片路径。请确认图片拥有合法使用权，并避免上传身份证、联系方式等隐私材料。
+
+### 5. 开启 GitHub Pages
+
+在自己的 GitHub 仓库中打开：
+
+`Settings` → `Pages` → `Deploy from a branch`
+
+选择：
+
+- Branch: `main`
+- Folder: `/ (root)`
+
+点击 **Save**，等待 GitHub Pages 完成部署即可访问网站。
+
+### 6. 提交更新
+
+```powershell
+git add .
+git commit -m "update personal portfolio"
+git push origin main
+```
+
+## Project structure
+
+```text
 .
-├── contents
-└── static
-    ├── assets
-    │   └── img
-    ├── css
-    └── js
+├── contents                  # YAML / Markdown 内容
+├── index.html                # 页面结构
+├── static
+│   ├── assets/img             # 头像、背景和图标
+│   ├── css                    # Bootstrap 与主题样式
+│   └── js                     # 内容加载与第三方前端资源
+└── tests                     # 内容与隐私回归检查
 ```
 
-(2) 修改各个板块的内容 | Modify the content of each section, which corresponds to `contents/*.md`.
+## Privacy and deployment notes
 
-(3) 调整网站设置 | Adjust the title, copyright information, and other text of the website in `contents/config.yml`
-
-(4) 替换图片 | Replace background image and photo with new ones for your web pages in `static/assets/img/`
-
-(5) 提交更改 | Push it: 
-```
-git commit -am 'init'
-git push
-```
-
-
-### 3. 访问你的网站 | Enjoy
-
-打开浏览器，访问 https://<用户名>.github.io，即可查看你的个人主页
-
-Fire up a browser and go to `https://<username>.github.io`
-
-
+- 本项目是纯静态网站，不需要用户登录、注册或后台服务。
+- 网站不会调用 GitHub API，也不会自动读取仓库数据。
+- 不要在公开内容中提交邮箱、手机号、密码、API Key 或其他敏感信息。
+- 修改内容后可以运行 `node tests/site-content-check.mjs`，检查项目链接和隐私字段。
 
 ## License
-本项目基于 MIT 许可协议，你可以自由使用和修改此模板。 Yixin Huang 2025年2月7号
 
-Copyright Yixin Huang, 2025. Licensed under an MIT license. You can copy and mess with this template.
+本项目使用 MIT License。详情请查看 [LICENSE](LICENSE)。
