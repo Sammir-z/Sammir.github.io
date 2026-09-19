@@ -4,7 +4,7 @@
     <h3>Adaptive-Margin Masking and Restoration</h3>
     <p>针对多模态联合训练中的强势模态主导和弱势模态学习不足问题，提出 AMRe 框架，根据样本粒度动态识别模态学习状态，并通过自适应遮掩与周期恢复缓解模态挤压。</p>
     <div class="metric-grid">
-      <div class="metric-item"><strong>71.24% → 75.54%</strong><span>CREMA-D 平均准确率</span></div>
+      <div class="metric-item"><strong>71.24% → 75.54%</strong><span>多模态数据集平均准确率</span></div>
       <div class="metric-item"><strong>73.52% → 81.18%</strong><span>CREMA-D 结果</span></div>
       <div class="metric-item"><strong>≈ 1.5%</strong><span>额外开销</span></div>
     </div>
